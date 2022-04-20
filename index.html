@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta nombre="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University - SurveyForm</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">University Survey Form</h1>
+        <p id="description" class="description text-center">
+          Formulario sobre temas universitarios.
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="nombre-label" for="nombre">Nombre</label>
+          <input
+            type="text"
+            nombre="nombre"
+            id="nombre"
+            class="form-control"
+            placeholder="Enter your nombre"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            nombre="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Edad<span class="clue"> (optional)</span></label
+          >
+          <input
+            type="number"
+            nombre="edad"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="edad"
+          />
+        </div>
+        <div class="form-group">
+          <p>¿En qué universidad estudias o has estudiado?</p>
+          <select id="dropdown" nombre="role" class="form-control" required>
+            <option disabled selected value>Seleccionar universidad</option>
+            <option value="Distrital">Distrital</option>
+            <option value="Bosque">Bosque</option>
+            <option value="Militar">Militar</option>
+            <option value="Nacional">Nacional</option>
+            <option value="otra">Otra</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>¿Recomiendas estudiar en esa universidad?</p>
+          <label>
+            <input
+              nombre="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Si</label
+          >
+          <label>
+            <input
+              nombre="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Quizá</label
+          >
+
+          <label
+            ><input
+              nombre="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />No</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>¿Qué es lo que más te gusta de la universidad?</p>
+          <select
+            id="most-like"
+            nombre="mostLike"
+            class="form-control"
+            required
+          >
+            <option disabled selected value>Selecciona una opción</option>
+            <option value="challenges">Social relations</option>
+            <option value="projects">Aprendizaje</option>
+            <option value="community">Instalaciones</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            ¿Qué te disgusta de la universidad?
+            <span class="clue">(Selecciona las opciones que vea necesarias)</span>
+          </p>
+
+          <label
+            ><input
+              nombre="prefer"
+              value="front-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Presion academica</label
+          >
+          <label>
+            <input
+              nombre="prefer"
+              value="back-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Docentes</label
+          >
+          <label
+            ><input
+              nombre="prefer"
+              value="data-visualization"
+              type="checkbox"
+              class="input-checkbox"
+            />Horarios</label
+          >
+          <label
+            ><input
+              nombre="prefer"
+              value="challenges"
+              type="checkbox"
+              class="input-checkbox"
+            />Challenges</label
+          >
+          <label
+            ><input
+              nombre="prefer"
+              value="open-source-community"
+              type="checkbox"
+              class="input-checkbox"
+            />Open Source Community</label
+          >
+          <label
+            ><input
+              nombre="prefer"
+              value="gitter-help-rooms"
+              type="checkbox"
+              class="input-checkbox"
+            />Gitter help rooms</label
+          >
+          <label
+            ><input
+              nombre="prefer"
+              value="videos"
+              type="checkbox"
+              class="input-checkbox"
+            />Videos</label
+          >
+          <label
+            ><input
+              nombre="prefer"
+              value="city-meetups"
+              type="checkbox"
+              class="input-checkbox"
+            />City Meetups</label
+          >
+          <label
+            ><input
+              nombre="prefer"
+              value="wiki"
+              type="checkbox"
+              class="input-checkbox"
+            />Wiki</label
+          >
+          <label
+            ><input
+              nombre="prefer"
+              value="forum"
+              type="checkbox"
+              class="input-checkbox"
+            />Forum</label
+          >
+          <label
+            ><input
+              nombre="prefer"
+              value="additional-courses"
+              type="checkbox"
+              class="input-checkbox"
+            />Additional Courses</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            nombre="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

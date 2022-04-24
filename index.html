@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>University - SurveyForm</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Formulario Universitario</h1>
+        <p id="description" class="description text-center">
+          Formulario sobre temas universitarios.
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Ingresa tu nombre"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Ingresa tu email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Edad<span class="clue"> (optional)</span></label
+          >
+          <input
+            type="number"
+            name="number"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Ingresa tu edad"
+          />
+        </div>
+        <div class="form-group">
+          <p>¿En qué universidad estudias o has estudiado?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Seleccionar universidad</option>
+            <option value="Distrital">Distrital</option>
+            <option value="Nacional">Nacional</option>
+            <option value="Bosque">Bosque</option>
+            <option value="Militar">Militar</option>
+            <option value="otra">Otra</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>¿Recomiendas estudiar en esa universidad?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Si</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Quizá</label
+          >
+
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />No</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>¿Qué es lo que más te gusta de la universidad?</p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Selecciona una opción</option>
+            <option value="social-relationships">Relaciones sociales</option>
+            <option value="learning">Aprendizaje</option>
+            <option value="infrastructure">infraestructura</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            ¿Qué te disgusta de la universidad?
+            <span class="clue"
+              >(Selecciona las opciones que vea necesarias)</span
+            >
+          </p>
+          <label>
+            <input
+              name="prefer"
+              value="academic-requirement"
+              type="checkbox"
+              class="input-checkbox"
+            />Presion academica</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="teachers"
+              type="checkbox"
+              class="input-checkbox"
+            />Docentes</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="schedules"
+              type="checkbox"
+              class="input-checkbox"
+            />Horarios</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="infrastructure"
+              type="checkbox"
+              class="input-checkbox"
+            />Infraestructura</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="filler"
+              type="checkbox"
+              class="input-checkbox"
+            />Materias inutiles</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>¿Algun comentario o sugerencia?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Ingresa tu comentario aquí..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="algo.js"></script>
+  </body>
+</html>
